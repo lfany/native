@@ -9,11 +9,15 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 export default class hello extends Component {
   render() {
+    let pic = {
+        uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+    };
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -26,6 +30,7 @@ export default class hello extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <Image source={pic} style={{width: 193, height: 110}}/>
       </View>
     );
   }
