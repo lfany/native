@@ -64,6 +64,21 @@ class Styles extends Component {
   }
 }
 
+class FixedDimensionBasics extends Component {
+  render() {
+    return (
+      <View>
+      <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}>
+      </View>
+      <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}}>
+      </View>
+      <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}}>
+      </View>
+      </View>
+    );
+  };
+}
+
 export default class hello extends Component {
   render() {
     let pic = {
@@ -76,6 +91,7 @@ export default class hello extends Component {
         <Blink txt="xzxc" text="xxxxxxxxxxxx">
         </Blink>
         <Styles/>
+        <FixedDimensionBasics/>
         {/*<Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
