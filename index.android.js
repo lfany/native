@@ -13,6 +13,14 @@ import {
   Image
 } from 'react-native';
 
+class Hello extends Component {
+  render() {
+    return (
+      <Text> Hello {this.props.name}! </Text>
+    );
+  }
+}
+
 export default class hello extends Component {
   render() {
     let pic = {
@@ -20,7 +28,9 @@ export default class hello extends Component {
     };
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
+
+        <Hello name="World"/>
+        {/*<Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
@@ -29,7 +39,7 @@ export default class hello extends Component {
         <Text style={styles.instructions}>
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
-        </Text>
+        </Text>*/}
         <Image source={pic} style={{width: 193, height: 110}}/>
       </View>
     );
