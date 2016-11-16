@@ -21,6 +21,28 @@ class Hello extends Component {
   }
 }
 
+
+class Blink extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {showText: true};
+
+    // Toggle the state every second
+    setInterval(() => {
+      this.setState({ showText: !this.state.showText});
+    }, 1000);
+  }
+
+    render() {
+      let display = this.state.showText ? this.props.text : '      ';
+      return (
+        <Text>
+           {this.props.txt}: {display}
+        </Text>
+      );
+    }
+}
+
 export default class hello extends Component {
   render() {
     let pic = {
@@ -30,6 +52,8 @@ export default class hello extends Component {
       <View style={styles.container}>
 
         <Hello name="World"/>
+        <Blink txt="xzxc" text="xxxxxxxxxxxx">
+          </Blink>
         {/*<Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
