@@ -94,6 +94,18 @@ class FlexDimensionBasics extends Component {
   }
 }
 
+class FlexDirectionBasics extends Component {
+  render() {
+    return(
+      <View style={{flex: 1, flexDirection: 'row', height: 100, width: 100}}>
+        <View style={{width: 50, height:50, backgroundColor: 'powderblue'}}/>
+        <View style={{width: 50, height:50, backgroundColor: 'skyblue'}}/>
+        <View style={{width: 50, height:50, backgroundColor: 'steelblue'}}/>
+      </View>
+    );
+  }
+}
+
 export default class hello extends Component {
   render() {
     let pic = {
@@ -109,6 +121,8 @@ export default class hello extends Component {
         <FixedDimensionBasics/>
 
         <FlexDimensionBasics/>
+
+        <FlexDirectionBasics/>
         {/*<Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
