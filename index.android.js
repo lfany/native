@@ -43,6 +43,27 @@ class Blink extends Component {
     }
 }
 
+class Styles extends Component {
+  render() {
+    return (
+      <View>
+        <Text style={styles.red}>
+          Red Red Red
+        </Text>
+        <Text style={styles.green}>
+          green green green
+        </Text>
+        <Text style={styles.blue}>
+          blue blue blue
+        </Text>
+        <Text style={styles.light}>
+          light light light
+        </Text>
+      </View>
+    );
+  }
+}
+
 export default class hello extends Component {
   render() {
     let pic = {
@@ -53,7 +74,8 @@ export default class hello extends Component {
 
         <Hello name="World"/>
         <Blink txt="xzxc" text="xxxxxxxxxxxx">
-          </Blink>
+        </Blink>
+        <Styles/>
         {/*<Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
@@ -86,6 +108,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  red: {
+    color: 'red',
+  },
+  green: {
+    color: 'green',
+  },
+  blue: {
+    color: 'blue',
+  },
+  light: {
+    color: 'lightblue',
   },
 });
 
