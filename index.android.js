@@ -79,6 +79,21 @@ class FixedDimensionBasics extends Component {
   };
 }
 
+class FlexDimensionBasics extends Component {
+  render() {
+    // Try removing the `flex: 1` on the parent View.
+     // The parent will not have dimensions, so the children can't expand.
+     // What if you add `height: 300` instead of `flex: 1`?
+    return (
+      <View style={{flex: 1, height: 100, width: 200}}>
+        <View style={{flex: 1, backgroundColor: 'powderblue'}}/>
+        <View style={{flex: 2, backgroundColor: 'skyblue'}}/>
+        <View style={{flex: 3, backgroundColor: 'steelblue'}}/>
+      </View>
+    );
+  }
+}
+
 export default class hello extends Component {
   render() {
     let pic = {
@@ -92,6 +107,8 @@ export default class hello extends Component {
         </Blink>
         <Styles/>
         <FixedDimensionBasics/>
+
+        <FlexDimensionBasics/>
         {/*<Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
